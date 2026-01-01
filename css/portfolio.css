@@ -1,0 +1,87 @@
+/* =====================
+   MIT PORTFOLIO – desktop
+===================== */
+
+.portfolio-page {
+  padding: 70px 0 100px; /* lidt mere “scroll” */
+}
+
+/* Grid: billede+knapper venstre, tekst højre */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 90px;
+  align-items: start;
+}
+
+/* Venstre kolonne */
+.portfolio-left {
+  width: 100%;
+  max-width: 420px;
+}
+
+/* Billede wrapper */
+.portfolio-img-wrap {
+  width: 100%;
+  max-width: 420px;
+}
+
+/* Billede */
+.portfolio-img {
+  width: 100%;
+  border-radius: 22px;
+  display: block;
+}
+
+/* Højre kolonne (tekst) */
+.portfolio-text {
+  max-width: 560px;
+}
+
+/* H1: mere rolig som “Om mig” (mindre + mere luft) */
+.portfolio-main-title {
+  font-family: "Dancing Script", cursive;
+  font-weight: 600;
+  font-size: 40px; /* mindre end før */
+  line-height: 1.1;
+  margin: 0 0 26px; /* mere luft under titel */
+  color: var(--blue-dark);
+}
+
+/* Brødtekst: mere luft som “Om mig” */
+.portfolio-text p {
+  font-family: "Lora", serif;
+  font-size: 16.5px;
+  line-height: 1.75;
+  margin: 0 0 18px;
+  color: var(--blue-dark);
+}
+
+/* Knapper under billedet */
+.portfolio-buttons.under-image {
+  margin-top: 26px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 22px;
+  width: 100%;
+  max-width: 420px; /* låses til billedets bredde */
+}
+
+/* Knapperne (bruger din .btn fra generel.css) */
+.portfolio-buttons.under-image .btn {
+  height: 52px;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 15.5px; /* en smule mindre = mere roligt */
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+/* Hover */
+.portfolio-buttons.under-image .btn:hover {
+  background: var(--orange);
+  color: white;
+}
