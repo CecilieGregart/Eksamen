@@ -1,0 +1,133 @@
+/* Luft omkring hele indholdet på siden */
+.project-page {
+  padding: 70px 0 110px;
+}
+
+/* ----- Sidetitel - Skrifttype, størrelse og placering ---- */
+.project-title {
+  font-family: "Dancing Script", cursive;
+  font-weight: 700;
+  font-size: 54px;
+  text-align: center;
+  margin: 0 0 60px;
+  color: var(--orange);
+}
+
+/* --- Sections -  Afstand mellem hver del (Løsning, Proces, Læring) ---- */
+.project-block {
+  margin-bottom: 95px;
+}
+
+/* ----(tekst + billede)  - 2 kolonner: tekst til venstre, billede til højre ---- */
+.project-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 60px;
+
+  /* billede ikke “hænger oppe” */
+  align-items: center;
+}
+
+/* ----- Tekst (overskrifter og brødtekst) ------------ */
+.project-text h2 {
+  font-family: "Lora", serif;
+  font-weight: 600;
+  font-size: 34px;
+  margin-bottom: 16px;
+  color: var(--blue-dark);
+}
+
+.project-text p {
+  font-family: "Lora", serif;
+  font-size: 17px;
+  line-height: 1.85;
+  margin-bottom: 18px;
+  color: var(--blue-dark);
+
+  /* linjelængden pæn og læsbar */
+  max-width: 78ch;
+}
+
+/* Punktliste under Proces */
+.project-list {
+  margin-left: 22px;
+  font-family: "Lora", serif;
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--blue-dark);
+}
+
+.project-list li {
+  margin-bottom: 8px;
+}
+
+/* --- (studiestartsprøve-link) ---- */
+.project-linkbox {
+  margin-top: 18px;
+}
+
+.project-link {
+  color: var(--blue-dark);
+  text-decoration: underline;
+}
+
+/* Billede-wrapper */
+.project-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.project-img img {
+  width: 100%;
+  max-width: 620px;
+  height: auto;
+  display: block;
+}
+
+/* Løsningsbilledet får lidt ekstra top-luft */
+.project-block:nth-of-type(1) .project-images {
+  margin-top: 40px;
+}
+
+/* Wrapper til løsningsbilledet */
+.project-images {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.project-images img {
+  width: 100%;
+  max-width: 950px;
+  height: auto;
+  display: block;
+}
+
+/* ---- PROCES ---- */
+
+/* mere plads til teksten */
+.project-block:nth-of-type(2) .project-grid {
+  grid-template-columns: 1fr 1.35fr;
+  gap: 45px;
+}
+
+/* ikke “kolonne-agtigt” */
+.project-block:nth-of-type(2) .project-text p {
+  max-width: none;
+}
+
+.project-block:nth-of-type(2) .project-img img {
+  max-width: 700px;
+}
+
+/* ---- LÆRING ---- */
+
+/* Læringsbilledet gøres lidt mindre */
+.project-block:nth-of-type(3) .project-img img {
+  max-width: 520px;
+}
+
+.project-block:nth-of-type(3) .project-img {
+  margin-top: 20px;
+}
