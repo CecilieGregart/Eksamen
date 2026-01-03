@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,8 +9,241 @@
       href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Lora:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/general.css" />
-    <title>Grundlæggende brugergrænsefladeudvikling</title>
+    <link rel="stylesheet" href="css/generel.css" />
+    <link rel="stylesheet" href="css/tema.css" />
+
+    <title>Grundlæggende Brugergrænsefladeudvikling</title>
   </head>
-  <body></body>
+
+  <body>
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">
+          <img src="img/logo.png" alt="CG logo" class="brand-logo" />
+        </a>
+
+        <nav class="nav">
+          <a href="index.html">Forside</a>
+          <span class="divider"></span>
+          <a href="mig.html">Om mig</a>
+          <span class="divider"></span>
+          <a href="portfolio.html">Mit portfolio</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+      <section class="project-page">
+        <div class="container">
+          <h1 class="project-title">
+            Grundlæggende brugergrænsefladeudvikling
+          </h1>
+
+          <!-- LØSNING -->
+          <section class="project-block">
+            <div class="project-grid">
+              <div class="project-text">
+                <h2>Løsning</h2>
+
+                <p>
+                  I dette tema har jeg arbejdet med at videreudvikle et
+                  Emergency Site med udgangspunkt i en udleveret kodebase og
+                  faste wireframes. Opgaven gav mulighed for at sætte sit eget
+                  præg på både indhold, udtryk og interaktion, og jeg valgte
+                  derfor selv nødsituation, farver og visuel stil for at skabe
+                  et site med en tydelig identitet og stemning.
+                </p>
+
+                <p>
+                  Mit fokus i løsningen har været at samle design og
+                  funktionalitet til en sammenhængende helhed. Jeg har arbejdet
+                  med farver, typografi og visuelle elementer, så sitet fremstår
+                  overskueligt og troværdigt, samtidig med at det understøtter
+                  den alvor, der ligger i et emergency-scenarie. De visuelle
+                  valg er implementeret direkte i koden og tilpasset den
+                  eksisterende struktur, så designet fungerer på tværs af
+                  siderne.
+                </p>
+
+                <p>
+                  Sitet indeholder flere interaktive elementer, som har til
+                  formål at gøre informationen mere tilgængelig for brugeren.
+                  Det gælder blandt andet “læs mere”-funktioner og popovers, der
+                  giver mulighed for at uddybe indhold uden at overvælde
+                  brugeren, samt en indberetningsformular, hvor brugeren kan
+                  registrere en nødsituation. Derudover har jeg implementeret
+                  dark mode, så brugeren kan skifte visning afhængigt af
+                  præference og kontekst.
+                </p>
+
+                <p>
+                  Den færdige løsning er et funktionelt og interaktivt Emergency
+                  Site, hvor jeg har bygget videre på et eksisterende fundament
+                  og gjort det til mit eget gennem designvalg, interaktion og
+                  kode. Sitet er deployet via GitHub Pages og viser, hvordan et
+                  givent udgangspunkt kan udvikles til en personlig og
+                  gennemarbejdet løsning.
+                </p>
+              </div>
+
+              <div class="project-images">
+                <img
+                  src="img/4løsning.webp"
+                  alt="Emergency site vist på desktop og mobil"
+                />
+              </div>
+            </div>
+          </section>
+
+          <!-- PROCES -->
+          <section class="project-block">
+            <div class="project-grid">
+              <div class="project-img">
+                <img
+                  src="img/4proces.webp"
+                  alt="Procesbillede med FigJam, Figma og skitser"
+                />
+              </div>
+
+              <div class="project-text">
+                <h2>Proces</h2>
+
+                <p>
+                  Min proces i dette tema har været præget af både
+                  eksperimentering og struktur. Jeg startede med idéudvikling,
+                  hvor jeg arbejdede med en cross method for at finde frem til
+                  mit endelige koncept. Her lavede jeg flere mindmaps og
+                  udvalgte nøgleord, som senere blev kombineret til et samlet
+                  udtryk. På den måde fik jeg et klart udgangspunkt for både
+                  tema, stemning og visuel retning.
+                </p>
+
+                <p>
+                  Herefter arbejdede jeg med skitsering og prototyper. Jeg
+                  startede med papirskitser og fortsatte senere i Figma, hvor
+                  jeg eksperimenterede med layout, farver og stil. I denne fase
+                  arbejdede jeg bevidst med mine egne farvevalg og visuelle
+                  idéer, samtidig med at jeg tog højde for den udleverede style
+                  guide. Prototyperne gav mig et godt overblik over, hvordan
+                  sitet skulle fungere, før jeg gik videre til kodning.
+                </p>
+
+                <p>
+                  Undervejs arbejdede jeg især med nogle nye teknikker, som har
+                  været centrale for temaet:
+                </p>
+
+                <ul class="project-list">
+                  <li>
+                    dark mode, hvor jeg arbejdede med styling og logik til at
+                    skifte mellem visninger
+                  </li>
+                  <li>
+                    popovers og “læs mere”-funktioner, som gør information mere
+                    overskuelig
+                  </li>
+                  <li>
+                    webformularer med fokus på usability og tydelig
+                    brugerfeedback
+                  </li>
+                  <li>
+                    SVG-grafik fra Illustrator, som blev implementeret på sitet
+                    og gjort interaktiv med JavaScript
+                  </li>
+                </ul>
+
+                <p>
+                  I udviklingsfasen arbejdede jeg videre i den udleverede kode
+                  og tilpassede både CSS og JavaScript. Gennem hele forløbet
+                  dokumenterede jeg mit arbejde i Figma og FigJam med
+                  screenshots og noter, så processen fra idé til færdigt site
+                  kunne følges trin for trin.
+                </p>
+
+                <div class="project-linkbox">
+                  <strong>Link til Emergency Site:</strong>
+                  <a
+                    class="project-link"
+                    href="https://ceciliegregart.github.io/morketsunami/"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    https://ceciliegregart.github.io/morketsunami/
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- LÆRING -->
+          <section class="project-block">
+            <div class="project-grid">
+              <div class="project-text">
+                <h2>Læring</h2>
+
+                <p>
+                  Temaet har givet mig en markant bedre forståelse for udvikling
+                  af brugergrænseflader, hvor design, interaktion og kode hænger
+                  tæt sammen. Jeg har fået praktisk erfaring med at
+                  videreudvikle et eksisterende website og tilpasse det til et
+                  nyt koncept, både visuelt og funktionelt.
+                </p>
+
+                <p>
+                  Jeg har især lært at arbejde med interaktive UI-elementer ved
+                  hjælp af CSS og JavaScript, herunder popovers, dark mode og
+                  formularer. Arbejdet med dark mode har givet mig indsigt i
+                  brugen af variabler og logik i JavaScript, mens
+                  formularopgaven har styrket min forståelse for både UX og
+                  funktionalitet i webforms.
+                </p>
+
+                <p>
+                  Derudover har jeg opnået erfaring med vektorgrafik og SVG
+                  gennem arbejdet i Adobe Illustrator. Jeg har lært, hvordan
+                  illustrationer kan designes specifikt til web og efterfølgende
+                  gøres interaktive via JavaScript. Samlet set har temaet
+                  styrket mine kompetencer inden for frontend-udvikling og givet
+                  mig en bedre forståelse for, hvordan man arbejder systematisk
+                  med idé, design, kode og dokumentation i ét samlet projekt.
+                </p>
+              </div>
+
+              <div class="project-img">
+                <img
+                  src="img/4læring.webp"
+                  alt="GitHub repository vist på computer"
+                />
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-left">
+          <p>Email: cecilieduegregart@gmail.com</p>
+          <p>Telefon: +45 30 22 26 560</p>
+        </div>
+
+        <div class="footer-right">
+          <img
+            class="footer-kitty"
+            src="img/footerbillede.png"
+            alt="Illustration af kat"
+          />
+          <div class="social">
+            <a href="#"><img src="img/instagram.png" alt="Instagram" /></a>
+            <a href="#"><img src="img/tiktok.png" alt="TikTok" /></a>
+            <a href="#"><img src="img/fb.png" alt="Facebook" /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
