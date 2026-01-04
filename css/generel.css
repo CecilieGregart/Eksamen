@@ -72,44 +72,124 @@ p {
 /* =====================
    HEADER
 ===================== */
+
 .site-header {
   background: var(--peach);
   border-bottom: 1px solid var(--line);
 }
 
+/* Header-indhold: fuld bredde, så logo kan komme helt til venstre */
 .header-inner {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 14px 0;
-  width: min(1250px, 96%);
-  margin: 0 auto;
+  justify-content: space-between;
+
+  width: 100%;
+  padding: 14px 24px; /* justér hvis du vil have mindre/mere luft i siderne */
+  position: relative;
 }
 
+/* Logo */
 .brand-logo {
   height: 65px;
+  width: auto;
+  display: block;
 }
 
+/* Desktop menu */
 .nav {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 22px;
 }
 
 .nav a {
   color: var(--orange);
   text-decoration: none;
   font-weight: 500;
+  font-size: 28px;
 }
 
 .nav a:hover {
-  text-decoration: none;
+  color: rgba(241, 139, 71, 0.75);
 }
 
-.divider {
-  width: 1px;
-  height: 18px;
-  background: rgba(234, 108, 22, 0.35);
+.nav a:focus,
+.nav a:active {
+  text-decoration: none; /* ingen streg ved klik */
+}
+
+/* Burger (skjult på desktop) */
+.burger {
+  display: none;
+  border: 0;
+  background: transparent;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* De 3 streger */
+.burger .line {
+  display: block;
+  width: 34px;
+  height: 3px;
+  background: var(--orange);
+  border-radius: 999px;
+  margin: 6px 0;
+  transition: 0.2s linear;
+}
+
+/* Kryds (X) når menu er åben */
+.burger.active .line:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+.burger.active .line:nth-child(2) {
+  opacity: 0;
+}
+.burger.active .line:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ---------------------
+   MOBIL
+--------------------- */
+@media (max-width: 800px) {
+  .burger {
+    display: block;
+    z-index: 1001;
+  }
+
+  /* Skjul links som standard på mobil */
+  .nav {
+    display: none;
+  }
+
+  /* Når der klikkes -> dropdown under header, fuld bredde */
+  .nav.active {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+
+    position: absolute;
+    top: 100%; /* ligger lige under header */
+    left: 0;
+    right: 0;
+
+    width: 100%;
+    background: var(--peach);
+    border-bottom: 1px solid var(--line);
+    padding: 28px 24px;
+
+    align-items: flex-end; /* tekst i højre side */
+    text-align: right;
+
+    z-index: 1000;
+  }
+
+  .nav.active a {
+    font-size: 28px; /* gør dem store som dine andre sites */
+    font-weight: 500;
+  }
 }
 
 /* =====================
