@@ -32,10 +32,13 @@
 }
 
 .hero-index-text h1 {
+  font-family: "Playfair Display", serif;
   margin: 0;
-  font-size: 56px;
+  font-size: clamp(36px, 5vw, 48px);
   color: var(--orange);
   text-shadow: none;
+  letter-spacing: 0.03em;
+  font-weight: 500;
 }
 
 .hero-index-text p {

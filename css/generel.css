@@ -69,24 +69,25 @@ p {
   margin-bottom: 14px;
 }
 
-/* =====================
-   HEADER
-===================== */
-
+/* ============ HEADER ============ */
 .site-header {
+  position: sticky; /* header bliver i toppen når man scroller */
+  top: 0;
+  z-index: 2000;
   background: var(--peach);
   border-bottom: 1px solid var(--line);
 }
 
-/* Header-indhold: fuld bredde, så logo kan komme helt til venstre */
 .header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  width: min(1250px, 96%);
+  margin: 0 auto;
+  padding: 14px 0;
 
-  width: 100%;
-  padding: 14px 24px; /* justér hvis du vil have mindre/mere luft i siderne */
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: relative; /* gør det nemmere at styre mobilmenuen */
 }
 
 /* Logo */
@@ -96,50 +97,53 @@ p {
   display: block;
 }
 
-/* Desktop menu */
-.nav {
+/* Navigation (desktop) */
+.site-nav {
   display: flex;
   align-items: center;
-  gap: 22px;
+  gap: 16px;
 }
 
-.nav a {
+.menu {
+  display: flex;
+  gap: 22px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu a {
   color: var(--orange);
   text-decoration: none;
   font-weight: 500;
-  font-size: 28px;
+  font-size: 22px;
 }
 
-.nav a:hover {
+.menu a:hover {
   color: rgba(241, 139, 71, 0.75);
 }
 
-.nav a:focus,
-.nav a:active {
-  text-decoration: none; /* ingen streg ved klik */
-}
-
-/* Burger (skjult på desktop) */
+/* Burger – skjult på desktop */
 .burger {
   display: none;
-  border: 0;
   background: transparent;
+  border: 0;
   padding: 10px;
   cursor: pointer;
 }
 
-/* De 3 streger */
+/* De tre streger i burgeren */
 .burger .line {
   display: block;
-  width: 34px;
+  width: 32px;
   height: 3px;
   background: var(--orange);
   border-radius: 999px;
   margin: 6px 0;
-  transition: 0.2s linear;
+  transition: 0.2s ease;
 }
 
-/* Kryds (X) når menu er åben */
+/* Når burgeren er aktiv, bliver den til et kryds */
 .burger.active .line:nth-child(1) {
   transform: rotate(45deg) translate(6px, 6px);
 }
@@ -147,51 +151,47 @@ p {
   opacity: 0;
 }
 .burger.active .line:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
+  transform: rotate(-45deg) translate(7px, -7px);
 }
 
-/* ---------------------
-   MOBIL
---------------------- */
+/* ============ MOBIL ============ */
 @media (max-width: 800px) {
   .burger {
-    display: block;
-    z-index: 1001;
+    display: block; /* burger vises på mobil */
+    z-index: 2001;
   }
 
-  /* Skjul links som standard på mobil */
-  .nav {
+  /* menuen er skjult indtil man klikker */
+  .menu {
     display: none;
   }
 
-  /* Når der klikkes -> dropdown under header, fuld bredde */
-  .nav.active {
+  /* når burgeren klikkes */
+  .site-nav.active .menu {
     display: flex;
     flex-direction: column;
-    gap: 22px;
+    align-items: flex-end;
+    text-align: right;
+    gap: 14px;
 
-    position: absolute;
-    top: 100%; /* ligger lige under header */
+    position: fixed;
     left: 0;
     right: 0;
+    top: 80px;
 
-    width: 100%;
     background: var(--peach);
+    padding: 22px;
+    box-sizing: border-box;
+
     border-bottom: 1px solid var(--line);
-    padding: 28px 24px;
-
-    align-items: flex-end; /* tekst i højre side */
-    text-align: right;
-
-    z-index: 1000;
   }
 
-  .nav.active a {
-    font-size: 28px; /* gør dem store som dine andre sites */
-    font-weight: 500;
+  .site-nav.active .menu a {
+    font-size: 26px;
+    font-weight: 400;
+    padding: 6px 0;
   }
 }
-
 /* =====================
    BUTTONS
 ===================== */
