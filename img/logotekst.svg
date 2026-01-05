@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 48.74 25.7">
+  <!-- Generator: Adobe Illustrator 30.1.0, SVG Export Plug-In . SVG Version: 2.1.1 Build 136)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: none;
+        stroke: #f28c28;
+        stroke-miterlimit: 10;
+        stroke-width: .75px;
+      }
+
+      .st1 {
+        fill: #f28c28;
+        font-family: SignPainter-HouseScript, SignPainter;
+        font-size: 18px;
+      }
+    </style>
+  </defs>
+  <text class="st1" transform="translate(0 16.9)"><tspan x="0" y="0">Cecilie </tspan></text>
+  <text/>
+  <path class="st0" d="M42.69,14.72c-.98-1.38-1.97-1.32-3.03-2.58-.27-.32-.8-.97-.95-1.94-.06-.41-.24-1.58.56-2.28.79-.69,1.92-.36,2.07-.32.84.26,1.27.9,1.39,1.09.25-.25.74-.68,1.48-.91.41-.13.93-.29,1.44-.08.74.29,1.14,1.2,1.16,1.93.02,1.04-.72,1.82-1.61,2.77-.31.33-.79.76-1.75,1.61-.83.74-1.29,1.11-1.4,1.76-.08.47.02,1.05.25,1.11.25.07.73-.51.77-1.11.03-.45-.19-.82-.37-1.06Z"/>
+</svg>

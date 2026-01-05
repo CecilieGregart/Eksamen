@@ -1,9 +1,8 @@
 const burger = document.querySelector(".burger");
-const nav = document.querySelector(".nav");
+const nav = document.querySelector("nav");
 
-burger.addEventListener("click", () => {
+burger.addEventListener("click", burgerClick);
+function burgerClick() {
   burger.classList.toggle("active");
   nav.classList.toggle("active");
-
-  burger.setAttribute("aria-expanded", burger.classList.contains("active"));
-});
+}
