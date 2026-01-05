@@ -5,12 +5,25 @@
 
 /* ----- Sidetitel - Skrifttype, størrelse og placering ---- */
 .project-title {
-  font-family: "Dancing Script", cursive;
-  font-weight: 700;
-  font-size: 54px;
-  text-align: center;
-  margin: 0 0 60px;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: clamp(48px, 8vw, 86px);
   color: var(--orange);
+
+  text-align: left;
+  margin-top: 18%;
+  margin-bottom: 24px; /* 👈 lille afstand til Tema 3 */
+}
+
+/* underteksten under overskrift */
+.project-subtitle {
+  font-family: "Playfair Display", serif;
+  font-size: 26px;
+  font-weight: 400;
+  color: var(--orange);
+
+  margin: 0;
+  margin-bottom: 160px;
 }
 
 /* --- Sections -  Afstand mellem hver del (Løsning, Proces, Læring) ---- */
