@@ -1,5 +1,5 @@
 /* =====================
-   MIT PORTFOLIO – desktop
+  PROJEKTER
 ===================== */
 
 .portfolio-page {
@@ -14,7 +14,7 @@
   align-items: start;
 }
 
-/* Venstre kolonne */
+/* Venstre kolonne (samler billede + knapper) */
 .portfolio-left {
   width: 100%;
   max-width: 420px;
@@ -26,19 +26,19 @@
   max-width: 420px;
 }
 
-/* Billede */
+/* Selve billedet */
 .portfolio-img {
   width: 100%;
   border-radius: 22px;
   display: block;
 }
 
-/* Højre kolonne (tekst) */
+/* Højre kolonne med tekst */
 .portfolio-text {
   max-width: 560px;
 }
 
-/* H1: mere rolig som “Om mig” (mindre + mere luft) */
+/* Hovedoverskrift */
 .portfolio-main-title {
   font-family: "Dancing Script", cursive;
   font-weight: 600;
@@ -48,7 +48,7 @@
   color: var(--blue-dark);
 }
 
-/* Brødtekst: mere luft som “Om mig” */
+/* Brødtekst: */
 .portfolio-text p {
   font-family: "Lora", serif;
   font-size: 16.5px;
@@ -64,10 +64,10 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 16px 22px;
   width: 100%;
-  max-width: 420px; /* låses til billedets bredde */
+  max-width: 420px; /* matcher billedets bredde */
 }
 
-/* Knapperne (bruger din .btn fra generel.css) */
+/* Styling af knapperne */
 .portfolio-buttons.under-image .btn {
   height: 52px;
   padding: 0 18px;
@@ -75,13 +75,82 @@
   align-items: center;
   justify-content: center;
 
-  font-size: 15.5px; /* en smule mindre = mere roligt */
+  font-size: 15.5px;
   font-weight: 600;
   letter-spacing: 0.3px;
 }
 
-/* Hover */
+/* Hover-effekt */
 .portfolio-buttons.under-image .btn:hover {
   background: var(--orange);
   color: white;
+}
+
+/* =========================
+   MOBILVISNING
+========================= */
+@media (max-width: 900px) {
+  .portfolio-page {
+    padding: 50px 0 70px;
+  }
+
+  /* Alt stables i én kolonne */
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+    justify-items: center;
+  }
+
+  /* Gør så billede, tekst og knapper kan styres individuelt */
+  .portfolio-left {
+    display: contents;
+  }
+
+  /* Billede øverst */
+  .portfolio-img-wrap {
+    width: 100%;
+    max-width: 520px;
+    order: 1;
+  }
+
+  .portfolio-img {
+    border-radius: 18px;
+  }
+
+  /* Tekst i midten */
+  .portfolio-text {
+    max-width: 520px;
+    width: 100%;
+    text-align: left;
+    order: 2;
+  }
+
+  .portfolio-main-title {
+    font-size: 36px;
+    margin-bottom: 18px;
+  }
+
+  .portfolio-text p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  /* Knapper nederst (under teksten) */
+  .portfolio-buttons.under-image {
+    order: 3;
+
+    width: 100%;
+    max-width: 520px;
+    margin-top: 8px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px 16px;
+  }
+
+  .portfolio-buttons.under-image .btn {
+    height: 48px;
+    font-size: 15px;
+  }
 }
