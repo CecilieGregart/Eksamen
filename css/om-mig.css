@@ -1,10 +1,12 @@
-/* ====== OM MIG ======== */
+/* =====================
+OM MIG
+===================== */
 
 .about-top {
   padding: 70px 0;
 }
 
-/* Grid til portræt og tekst ved siden af hinanden */
+/* Grid: portræt til venstre, tekst til højre */
 .about-grid {
   display: grid;
   grid-template-columns: 460px 1fr;
@@ -35,14 +37,16 @@
   max-width: 560px;
 }
 
-/* ======= ERHVERVSERFARING + UDDANNELSE ========== */
+/* =========================
+   ERHVERVSERFARING + UDDANNELSE
+========================= */
 
 .two-cols {
   padding: 80px 0;
 }
 
-/* Grid med kolonner:
-   venstre indhold – streg – højre indhold */
+/* Grid med 3 kolonner:
+   venstre tekst – streg – højre tekst */
 .two-cols-grid {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
@@ -64,16 +68,18 @@
   text-align: left;
 }
 
-/* Lodret streg mellem de to kolonner */
+/* Lodret streg i midten */
 .divider {
   width: 1px;
   background: rgba(60, 70, 110, 0.3);
   height: 100%;
 }
 
-/* ===== TYPOGRAFI ======== */
+/* =====================
+   TYPOGRAFI
+===================== */
 
-/* Script-overskrifter (bruges flere steder) */
+/* Script-overskrifter */
 .script-title {
   font-family: "Dancing Script", cursive;
   font-weight: 600;
@@ -82,7 +88,7 @@
   color: var(--blue-dark);
 }
 
-/* Lister uden “tung” styling */
+/* Listerne - simple og læsbare */
 .clean-list {
   margin: 0;
   padding-left: 18px;
@@ -98,7 +104,9 @@
   white-space: nowrap;
 }
 
-/* ==== HVAD HAR JEG LÆRT ======== */
+/* =========================
+   HVAD HAR JEG LÆRT
+========================= */
 
 .learn-section {
   padding: 100px 0;
@@ -128,7 +136,9 @@
   margin: 0 auto 22px;
 }
 
-/* ====== KNAP ======== */
+/* =====================
+   BUTTONS
+===================== */
 
 .btn {
   display: inline-block;
@@ -144,4 +154,82 @@
 .btn:hover {
   background: var(--orange);
   color: white;
+}
+
+/* =========================
+   MOBILVISNING
+========================= */
+@media (max-width: 900px) {
+  /* TOP: billede + tekst stables */
+  .about-top {
+    padding: 50px 0;
+  }
+
+  /* Læg billede og tekst under hinanden */
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    justify-items: center;
+    text-align: left;
+  }
+
+  .about-text {
+    max-width: 100%;
+  }
+
+  /* Portræt lidt mindre på mobil */
+  .about-photo img:first-child {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  /* Blomsten lidt mindre så den ikke fylder for meget */
+  .about-flower {
+    width: 44px;
+  }
+
+  /* ---------- ERHVERVSERFARING + UDDANNELSE ---------- */
+
+  .two-cols {
+    padding: 60px 0;
+  }
+
+  /* Stack kolonnerne under hinanden */
+  .two-cols-grid {
+    grid-template-columns: 1fr;
+    row-gap: 50px;
+    column-gap: 0;
+    padding: 0 8vw;
+  }
+
+  /* Fjern den lodrette streg på mobil */
+  .divider {
+    display: none;
+  }
+
+  /* Script-overskrifter lidt mindre */
+  .script-title {
+    font-size: 32px;
+    text-align: left;
+  }
+
+  /* Lister får lidt mindre indryk */
+  .clean-list {
+    padding-left: 14px;
+  }
+
+  /* ---------- HVAD HAR JEG LÆRT ---------- */
+
+  .learn-section {
+    padding: 70px 0;
+  }
+
+  /* Ikonet lidt mindre på mobil */
+  .learn-icon img {
+    width: 60px;
+  }
+
+  .learn-text {
+    max-width: 100%;
+  }
 }
