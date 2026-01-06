@@ -237,3 +237,31 @@
     margin-top: 10px;
   }
 }
+/* =========================
+   KNAPPER PÅ TEMA-SIDER
+========================= */
+
+/* Wrapper så knappen får luft og står pænt under teksten */
+.project-actions {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Secondary button – blå */
+.btn-blue {
+  background: #b7ccf0; /* lys blå fra style tile */
+  border: 1.5px solid #2e4470; /* mørkeblå kant*/
+  color: #2e4470; /* samme mørkeblå som brødteksten */
+  font-weight: 600;
+}
+/* Diskret hover
+   Ikke et farveskift – lille “tryk”-fornemmelse */
+.btn.btn-blue:hover {
+  background: #b7ccf0;
+  color: #2e4470; /* teksten ændrer sig ikke */
+
+  transform: translateY(1px); /* knappen rykker sig en ned */
+  box-shadow: inset 0 0 0 999px rgba(46, 68, 112, 0.06);
+}
