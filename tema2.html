@@ -53,8 +53,12 @@
     <main>
       <section class="project-page">
         <div class="container">
-          <h1 class="project-title">Grundlæggende web</h1>
-          <p class="project-subtitle">Tema 2</p>
+          <header class="project-hero">
+            <div class="project-hero-inner">
+              <h1 class="project-title">Studiestartsprøve</h1>
+              <p class="project-subtitle">Tema 2 · Grundlæggende web</p>
+            </div>
+          </header>
 
           <!-- LØSNING -->
           <section class="project-block">
@@ -65,18 +69,17 @@
                 <p>
                   I dette tema arbejdede jeg med grundlæggende web med fokus på
                   HTML og CSS. Opgaven tog udgangspunkt i et mobildesign, som
-                  efterfølgende skulle tilpasses desktop-visning. En central del
-                  af opgaven var at sikre, at sitet fungerede responsivt og
-                  fulgte det udleverede wireframe og layoutdiagram.
+                  efterfølgende skulle tilpasses desktop-visning, og havde til
+                  formål at give en grundlæggende forståelse for opbygning af et
+                  responsivt website.
                 </p>
 
                 <p>
                   Websitet blev opbygget med semantisk HTML og struktureret CSS,
                   hvor jeg arbejdede med farver, typografi og billedplacering.
-                  Der blev anvendt to forskellige fonte, og sitet blev opdelt i
-                  flere HTML-sider, som tilsammen dannede et sammenhængende
-                  website. Afslutningsvis blev projektet uploadet via GitHub og
-                  publiceret med GitHub Pages.
+                  Projektet bestod af flere HTML-sider, som tilsammen dannede et
+                  sammenhængende site, og blev til sidst publiceret via GitHub
+                  Pages.
                 </p>
               </div>
 
@@ -104,34 +107,39 @@
                 <p>
                   Processen i dette tema var tæt styret af den udleverede
                   opgaveformulering og fungerede samtidig som min
-                  studiestartsprøve. Formålet var at demonstrere, at jeg havde
-                  forstået de grundlæggende teknikker inden for webudvikling og
-                  kunne anvende dem korrekt.
+                  studiestartsprøve. Her skulle jeg demonstrere, at jeg havde
+                  forstået de grundlæggende principper inden for HTML og CSS.
                 </p>
 
                 <p>
                   Vi arbejdede ud fra færdige wireframes og layoutdiagrammer,
                   som viste både mobil- og desktopversioner af sitet.
-                  Layoutdiagrammerne var opbygget med brug af CSS Grid og
-                  Flexbox, og vi skulle følge de angivne class- og id-navne for
-                  at opnå den korrekte struktur.
+                  Layoutdiagrammerne var opbygget med CSS Grid og Flexbox, og
+                  det var vigtigt at følge de angivne class- og id-navne for at
+                  opnå den korrekte struktur.
                 </p>
 
                 <p>
-                  Undervejs lavede jeg mange øvelser, hvor jeg eksperimenterede
+                  I arbejdet med sitet tog jeg udgangspunkt i mobile first, hvor
+                  jeg først fik mobilvisningen til at fungere og derefter
+                  udvidede layoutet til desktop ved hjælp af media queries.
+                </p>
+
+                <p>
+                  Undervejs lavede jeg øvelser, hvor jeg blandt andet arbejdede
                   med:
                 </p>
 
                 <ul class="project-list">
                   <li>
-                    grid-layouts, der ændrede struktur fra mobil til desktop
+                    Grid-layouts, der ændrede struktur fra mobil til desktop
                   </li>
                   <li>
-                    placering af tekst og billeder i forskellige
+                    Placering af tekst og billeder i forskellige
                     kolonneopsætninger
                   </li>
                   <li>
-                    hvordan indhold kan flyttes fra at stå under hinanden til at
+                    Hvordan indhold kan flyttes fra at stå under hinanden til at
                     stå side om side
                   </li>
                 </ul>
@@ -139,12 +147,8 @@
                 <p>
                   Derudover arbejdede jeg med styling af tekst, herunder
                   line-height, letter-spacing, tekstlinks, baggrundsbilleder og
-                  webfonte.
-                </p>
-
-                <p>
-                  Som en del af opgaven skulle HTML-koden validere uden fejl, og
-                  sitet måtte ikke indekseres af søgemaskiner.
+                  webfonte. Som en del af opgaven skulle HTML-koden validere
+                  uden fejl, og sitet måtte ikke indekseres af søgemaskiner.
                 </p>
               </div>
             </div>
@@ -157,16 +161,15 @@
                 <h2>Læring</h2>
 
                 <p>
-                  Gennem Tema 2 har jeg opnået en grundlæggende forståelse for,
-                  hvordan websites opbygges med HTML og CSS. Jeg har lært at
-                  arbejde struktureret med layoutdiagrammer, wireframes og
-                  responsive designprincipper.
+                  Tema 2 har givet mig en grundlæggende forståelse for, hvordan
+                  websites opbygges med HTML og CSS, og hvordan struktur og
+                  layout hænger sammen.
                 </p>
 
                 <p>
-                  Særligt arbejdet med CSS Grid og Flexbox har givet mig en
-                  bedre forståelse for, hvordan man opbygger fleksible layouts,
-                  der tilpasser sig forskellige skærmstørrelser.
+                  Jeg har fået praktisk erfaring med responsivt webdesign og
+                  arbejdet med CSS Grid, Flexbox og media queries, som gør det
+                  muligt at tilpasse et layout til forskellige skærmstørrelser.
                 </p>
 
                 <p>
@@ -175,7 +178,6 @@
                   temaer.
                 </p>
 
-                <!-- KNAP under LÆRING -->
                 <div class="project-actions">
                   <a
                     class="btn btn-blue"
@@ -200,17 +202,14 @@
     <!-- FOOTER -->
     <footer class="site-footer">
       <div class="container footer-inner">
-        <!-- VENSTRE: IDENTITET -->
         <div class="footer-left">
           <p class="footer-title">Portfolio</p>
           <p>Multimediedesign</p>
           <p>1. semester</p>
         </div>
 
-        <!-- MIDTEN: IKONER -->
         <div class="footer-center">
           <img src="img/footerbillede.png" alt="Kat" class="footer-kitty" />
-
           <div class="social">
             <a href="#"><img src="img/instagram.png" alt="Instagram" /></a>
             <a href="#"><img src="img/tiktok.png" alt="TikTok" /></a>
@@ -218,7 +217,6 @@
           </div>
         </div>
 
-        <!-- HØJRE: KONTAKT -->
         <div class="contact">
           <p class="footer-title">Kontakt</p>
           <p>Email: cecilieduegregart@gmail.com</p>
@@ -226,6 +224,7 @@
         </div>
       </div>
     </footer>
+
     <script src="js/burger.js"></script>
   </body>
 </html>

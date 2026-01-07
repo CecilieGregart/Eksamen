@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -52,8 +53,15 @@
     <main>
       <section class="project-page">
         <div class="container">
-          <h1 class="project-title">Grundlæggende UX</h1>
-          <p class="project-subtitle">Tema 3</p>
+          <header class="project-hero">
+            <div class="project-hero-inner">
+              <h1 class="project-title">Emnesite</h1>
+
+              <p class="project-name">Social Mirror</p>
+
+              <p class="project-subtitle">Tema 3 · Grundlæggende UX</p>
+            </div>
+          </header>
 
           <!-- LØSNING -->
           <section class="project-block">
@@ -65,23 +73,21 @@
                   I dette tema har jeg designet og udviklet et emnesite om et
                   selvvalgt emne med fokus på både indhold, visuel identitet og
                   brugervenlighed. Emnet blev valgt ud fra min egen interesse og
-                  viden samt et ønske om at arbejde med et website, hvor
-                  struktur, indhold og design hænger tæt sammen.
+                  et ønske om at arbejde med et website, hvor struktur, indhold
+                  og design hænger tæt sammen.
                 </p>
 
                 <p>
                   Sitet er baseret på en digital prototype udarbejdet i Figma og
-                  består af minimum tre HTML-sider. I prototypen arbejdede jeg
-                  med layout, navigation og visuelle valg, som efterfølgende
-                  blev omsat til et kodet site. Design og struktur er
+                  består af minimum tre HTML-sider. Design og struktur er
                   implementeret med HTML og CSS, mens JavaScript er anvendt til
                   mindre interaktive elementer, herunder navigationsmenuen.
                 </p>
 
                 <p>
-                  Websitet er udviklet responsivt med relevante breakpoints, så
-                  layout og navigation fungerer på både mobil og desktop. Det
-                  færdige site er testet og publiceret via GitHub Pages.
+                  Websitet er udviklet responsivt, så layout og navigation
+                  fungerer på både mobil og desktop, og det færdige site er
+                  publiceret via GitHub Pages.
                 </p>
               </div>
 
@@ -110,48 +116,47 @@
                 <h2>Proces</h2>
 
                 <p>
-                  Processen i Tema 3 tog udgangspunkt i research og
-                  idéudvikling, hvor jeg arbejdede med at finde et emne til mit
-                  emnesite og afgrænse målgruppe samt brugerens behov. Formålet
-                  var at skabe et solidt fundament, inden jeg begyndte på det
-                  visuelle og tekniske arbejde.
+                  Processen i Tema 3 tog udgangspunkt i en brugercentreret
+                  tilgang, hvor jeg arbejdede trin for trin fra research til
+                  færdigt website. Målet var at skabe et emnesite med en tydelig
+                  visuel identitet og en god brugeroplevelse.
                 </p>
 
                 <p>
-                  Jeg arbejdede løbende i Figma og FigJam med at undersøge,
-                  strukturere og udvikle idéen. Her brugte jeg forskellige
-                  øvelser og metoder til at skabe overblik over både indhold,
-                  struktur og visuel retning, så jeg kunne træffe bevidste
-                  designvalg tidligt i processen.
+                  Jeg startede med research og idéudvikling, hvor jeg undersøgte
+                  mit valgte emne og analyserede lignende websites. Dette gav
+                  mig indsigt i målgruppe, indhold og struktur og dannede
+                  grundlag for de videre designvalg.
                 </p>
 
-                <p>Undervejs arbejdede jeg især med:</p>
+                <p>
+                  På baggrund af researchen arbejdede jeg i Figma med at
+                  strukturere indhold, udvikle layout og fastlægge den visuelle
+                  retning. Her udviklede jeg både lo-fi og hi-fi prototyper, som
+                  gjorde det muligt at teste flow, navigation og opbygning,
+                  inden jeg gik videre til kodning.
+                </p>
+
+                <p>
+                  Efterfølgende omsatte jeg prototypen til et kodet site ved
+                  hjælp af HTML, CSS og JavaScript. Undervejs testede jeg sitet
+                  på forskellige skærmstørrelser og justerede layout og styling,
+                  så løsningen fungerede responsivt på både mobil og desktop.
+                </p>
+
+                <p>
+                  For at holde processen overskuelig kan den kort opsummeres i
+                  de vigtigste trin her:
+                </p>
 
                 <ul class="project-list">
-                  <li>
-                    research og analyse af relevante medier, som gav inspiration
-                    til indhold, opbygning og visuel stil
-                  </li>
-                  <li>
-                    udvikling af klikbare prototyper i Figma, hvor jeg kunne
-                    afprøve layout, navigation og flow, inden jeg gik videre til
-                    kodning
-                  </li>
-                  <li>
-                    definition af målgruppe og user stories, så sitet blev
-                    designet med brugerens behov og adfærd i centrum
-                  </li>
+                  <li>Research og analyse af emne og målgruppe</li>
+                  <li>Idéudvikling og strukturering af indhold</li>
+                  <li>Design og prototyping i Figma</li>
+                  <li>Omsætning af prototype til et responsivt website</li>
                 </ul>
 
-                <p>
-                  Efter prototypen var færdig, omsatte jeg designet til et kodet
-                  site. Her arbejdede jeg med HTML og CSS til struktur og
-                  styling samt JavaScript til mindre funktionelle elementer.
-                  Gennem hele forløbet dokumenterede jeg mit arbejde, så
-                  processen tydeligt kan følges fra idé til færdigt website.
-                </p>
-
-                <!-- KNAP: FIGMA  -->
+                <!-- KNAP: -->
                 <div class="project-actions">
                   <a
                     class="btn btn-blue"
@@ -192,7 +197,7 @@
                   Det frie valg af emne gav mulighed for at eksperimentere og
                   afprøve idéer undervejs. Samlet set har temaet givet mig et
                   solidt fundament, som jeg kan bygge videre på i de kommende
-                  temaer og projekter.
+                  temaer.
                 </p>
 
                 <!-- KNAP: FÆRDIGT SITE -->
@@ -220,17 +225,14 @@
     <!-- FOOTER -->
     <footer class="site-footer">
       <div class="container footer-inner">
-        <!-- VENSTRE: IDENTITET -->
         <div class="footer-left">
           <p class="footer-title">Portfolio</p>
           <p>Multimediedesign</p>
           <p>1. semester</p>
         </div>
 
-        <!-- MIDTEN: IKONER -->
         <div class="footer-center">
           <img src="img/footerbillede.png" alt="Kat" class="footer-kitty" />
-
           <div class="social">
             <a href="#"><img src="img/instagram.png" alt="Instagram" /></a>
             <a href="#"><img src="img/tiktok.png" alt="TikTok" /></a>
@@ -238,7 +240,6 @@
           </div>
         </div>
 
-        <!-- HØJRE: KONTAKT -->
         <div class="contact">
           <p class="footer-title">Kontakt</p>
           <p>Email: cecilieduegregart@gmail.com</p>
@@ -246,6 +247,7 @@
         </div>
       </div>
     </footer>
+
     <script src="js/burger.js"></script>
   </body>
 </html>
