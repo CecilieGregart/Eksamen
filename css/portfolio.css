@@ -1,156 +1,149 @@
 /* =====================
-  PROJEKTER
+   PROJEKTER (MOBILE FIRST)
 ===================== */
 
+/* luft omkring hele siden */
 .portfolio-page {
-  padding: 70px 0 100px; /* lidt mere “scroll” */
+  padding: 50px 0 70px;
 }
 
-/* Grid: billede+knapper venstre, tekst højre */
+/* Alt stables i én kolonne */
 .portfolio-grid {
   display: grid;
-  grid-template-columns: 420px 1fr;
-  gap: 90px;
-  align-items: start;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  justify-items: center;
 }
 
-/* Venstre kolonne (samler billede + knapper) */
 .portfolio-left {
-  width: 100%;
-  max-width: 420px;
+  display: contents; /*  “splitte” venstre kolonne op og flytte tingene rundt i mobil-layoutet */
 }
 
-/* Billede wrapper */
+/* Billedet skal være øverst på mobil */
 .portfolio-img-wrap {
   width: 100%;
-  max-width: 420px;
+  max-width: 520px;
+  order: 1;
 }
 
-/* Selve billedet */
 .portfolio-img {
   width: 100%;
-  border-radius: 22px;
+  border-radius: 18px;
   display: block;
 }
 
-/* Højre kolonne med tekst */
+/* Tekst kommer efter billedet */
 .portfolio-text {
-  max-width: 560px;
+  max-width: 520px;
+  width: 100%;
+  text-align: left;
+  order: 2;
 }
 
-/* Hovedoverskrift */
+/* Titel på siden */
 .portfolio-main-title {
   font-family: "Dancing Script", cursive;
   font-weight: 600;
-  font-size: 40px; /* mindre end før */
+  font-size: 36px;
   line-height: 1.1;
-  margin: 0 0 26px; /* mere luft under titel */
+  margin: 0 0 18px;
   color: var(--blue-dark);
 }
 
 /* Brødtekst: */
 .portfolio-text p {
   font-family: "Lora", serif;
-  font-size: 16.5px;
-  line-height: 1.75;
+  font-size: 16px;
+  line-height: 1.7;
   margin: 0 0 18px;
   color: var(--blue-dark);
 }
 
-/* Knapper under billedet */
+/* Mobil: knapperne skal ligge under teksten */
 .portfolio-buttons.under-image {
-  margin-top: 26px;
+  order: 3;
+  width: 100%;
+  max-width: 520px;
+  margin-top: 8px;
+
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 16px 22px;
-  width: 100%;
-  max-width: 420px; /* matcher billedets bredde */
+  gap: 14px 16px;
 }
 
-/* Styling af knapperne */
+/* Knapperne centreres pænt og får fast højde */
 .portfolio-buttons.under-image .btn {
-  height: 52px;
+  height: 48px;
+  font-size: 15px;
   padding: 0 18px;
+
   display: flex;
   align-items: center;
   justify-content: center;
-
-  font-size: 15.5px;
-  font-weight: 600;
-  letter-spacing: 0.3px;
 }
 
-/* Hover-effekt */
-.portfolio-buttons.under-image .btn:hover {
-  background: var(--orange);
-  color: white;
-}
+/* =====================
+   DESKTOP (fra 900px)
+===================== */
 
-/* =========================
-   MOBILVISNING
-========================= */
-@media (max-width: 900px) {
+@media (min-width: 900px) {
   .portfolio-page {
-    padding: 50px 0 70px;
+    padding: 70px 0 100px;
   }
 
-  /* Alt stables i én kolonne */
+  /* Desktop: tilbage til 2 kolonner (billede/knapper venstre + tekst højre) */
   .portfolio-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 28px;
-    justify-items: center;
+    grid-template-columns: 420px 1fr;
+    gap: 90px;
+    align-items: start;
+    justify-items: start;
   }
 
-  /* Gør så billede, tekst og knapper kan styres individuelt */
+  /* “normal” igen (ikke contents) */
   .portfolio-left {
-    display: contents;
+    display: block;
+    width: 100%;
+    max-width: 420px;
   }
 
-  /* Billede øverst */
   .portfolio-img-wrap {
-    width: 100%;
-    max-width: 520px;
-    order: 1;
+    max-width: 420px;
+    order: initial;
   }
 
   .portfolio-img {
-    border-radius: 18px;
+    border-radius: 22px;
   }
 
-  /* Tekst i midten */
   .portfolio-text {
-    max-width: 520px;
-    width: 100%;
-    text-align: left;
-    order: 2;
+    max-width: 560px;
+    order: initial;
   }
 
   .portfolio-main-title {
-    font-size: 36px;
-    margin-bottom: 18px;
+    font-size: 40px;
+    margin: 0 0 26px;
   }
 
   .portfolio-text p {
-    font-size: 16px;
-    line-height: 1.7;
+    font-size: 16.5px;
+    line-height: 1.75;
   }
 
-  /* Knapper nederst (under teksten) */
+  /* knapperne ligger under billedet */
   .portfolio-buttons.under-image {
-    order: 3;
+    margin-top: 26px;
+    max-width: 420px;
 
-    width: 100%;
-    max-width: 520px;
-    margin-top: 8px;
-
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 14px 16px;
+    gap: 16px 22px;
+
+    order: initial;
   }
 
   .portfolio-buttons.under-image .btn {
-    height: 48px;
-    font-size: 15px;
+    height: 52px;
+    font-size: 15.5px;
+    letter-spacing: 0.3px;
   }
 }

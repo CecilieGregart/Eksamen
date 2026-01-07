@@ -1,97 +1,93 @@
 /* =========================
-INDEX
+   INDEX (MOBILE FIRST)
 ========================= */
 
-/* Hero-sektionen med stort billede */
+/* ===== HERO ===== */
+/* Hero = det store billede + titel/tekst øverst på forsiden */
 .hero-index {
-  position: relative; /* så teksten kan placeres ovenpå billedet */
+  position: relative;
   width: 100%;
-  height: 80vh;
-  min-height: 750px;
+
+  /* hero skal føles stor - ikke for høj */
+  height: 70vh;
+  min-height: 520px;
+
   overflow: hidden;
   border-bottom: 1px solid rgba(46, 68, 112, 0.15);
 }
 
-/* Hero-billedet */
+/* Baggrundsbilledet i hero */
 .hero-index-img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* fylder hele heroen */
-  object-position: center 60%; /* lidt fokus nedad i billedet */
+  object-fit: cover; /* billedet fylder uden at blive mast */
+  object-position: center 60%; /* rykker lidt ned */
   display: block;
 }
 
-/* HERO tekst på billedet */
+/* Teksten ligger oven på billedet */
 .hero-index-text {
   position: absolute;
-  left: 70px;
-  bottom: 70px;
-  max-width: 760px;
-  background: transparent;
-  border: none;
-  padding: 0;
-  border-radius: 0;
-  backdrop-filter: none;
+  left: 18px;
+  right: 18px;
+  bottom: 22px;
 }
 
+/* H1 i hero (forside-titlen) */
 .hero-index-text h1 {
   font-family: "Playfair Display", serif;
   margin: 0;
-  font-size: clamp(36px, 5vw, 48px);
+  font-size: clamp(28px, 7vw, 40px);
+  line-height: 1;
   color: var(--orange);
-  text-shadow: none;
   letter-spacing: 0.03em;
   font-weight: 500;
 }
 
+/* Den lille tekst under H1 */
 .hero-index-text p {
   margin-top: 8px;
   margin-bottom: 0;
   font-family: "Lora", serif;
-  font-size: 18px;
+  font-size: 16px;
   color: var(--orange);
   text-shadow: none;
 }
 
-/* =========================
-   INTRO
-========================= */
+/* ===== INTRO ===== */
 .intro-section {
-  padding: 70px 0 40px;
+  padding: 50px 0 26px;
 }
 
 .intro-box {
   max-width: 720px;
   margin: 0 auto;
-  text-align: center;
+  text-align: center; /* i midten */
 }
 
 .intro-box h2 {
   margin-bottom: 18px;
 }
 
-/* =========================
-   CARDS
-========================= */
+/* ===== CARDS ===== */
 .cards-section {
-  padding: 80px 0 120px;
+  padding: 70px 0 100px;
 }
 
+/* Mobil: alt stables i én kolonne */
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(320px, 1fr));
-  gap: 90px;
-  align-items: start;
-  justify-items: center; /* så hver “card” står pænt centreret i sin kolonne */
+  grid-template-columns: 1fr;
+  gap: 40px;
+  justify-items: center;
 }
 
-/* Grid med to kort ved siden af hinanden */
 .choice-card {
   text-align: center;
   width: 100%;
 }
 
-/* Billederne vises i deres naturlige format (ingen crop) */
+/* Billederne må ikke croppes –  pæne og runde */
 .choice-card img {
   width: 100%;
   max-width: 360px;
@@ -101,7 +97,7 @@ INDEX
   margin: 0 auto 14px;
 }
 
-/* Tekst under billede */
+/* Teksten under billedet */
 .choice-caption {
   margin: 0 0 12px;
   font-weight: 600;
@@ -109,66 +105,44 @@ INDEX
 }
 
 /* =========================
-   KNAPPER
+   DESKTOP
 ========================= */
 
-/* KNAP: peach fyld + orange outline */
-.btn {
-  display: inline-block;
-  padding: 12px 26px;
-  border-radius: 999px;
-  background: var(--peach);
-  border: 2px solid var(--orange);
-  color: var(--orange);
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.2s ease;
-}
-
-.btn:hover {
-  background: var(--orange);
-  color: white;
-}
-
-/* =========================
-   MOBILVISNING
-========================= */
-
-@media (max-width: 900px) {
-  /* HERO - justeres til mindre skærme */
+@media (min-width: 900px) {
   .hero-index {
-    height: 70vh;
-    min-height: 520px;
+    height: 80vh;
+    min-height: 750px;
   }
 
+  /* hero-teksten står i venstre side */
   .hero-index-text {
-    left: 18px;
-    right: 18px;
-    bottom: 22px;
-    max-width: none;
+    left: 70px;
+    right: auto;
+    bottom: 70px;
+    max-width: 760px;
   }
 
   .hero-index-text h1 {
-    font-size: clamp(28px, 7vw, 40px);
-    line-height: 1.1;
+    font-size: clamp(36px, 5vw, 48px);
+    line-height: normal;
   }
 
   .hero-index-text p {
-    font-size: 16px;
+    font-size: 18px;
   }
 
-  /* INTRO */
   .intro-section {
-    padding: 50px 0 26px;
+    padding: 70px 0 40px;
   }
 
-  .intro-box {
-    text-align: center;
+  .cards-section {
+    padding: 80px 0 120px;
   }
 
-  /* CARDS - stables i én kolonne */
+  /* Desktop: kortene står ved siden af hinanden */
   .cards-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
+    grid-template-columns: repeat(2, minmax(320px, 1fr));
+    gap: 90px;
+    align-items: start;
   }
 }
